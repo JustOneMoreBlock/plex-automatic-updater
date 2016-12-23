@@ -37,7 +37,9 @@ $releases = $plex->computer->Linux->releases;
 
 foreach ($releases as $release) {
     if ($release->label == $label) {
-        echo $release->url;
+         echo "Downloading: $release->url\r\n";
+         //Install
+         //shell_exec("INSTALL $release->url");
     }
 }
 
